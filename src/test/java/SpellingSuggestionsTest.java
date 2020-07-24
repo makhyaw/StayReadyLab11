@@ -14,56 +14,63 @@ public class SpellingSuggestionsTest {
     }
 
     @Test
-    public void deleteFLTest() {
+    public void deleteFLTest(){ //FL= first letter
+        String name= "Makhya";
         //given
-
-        //when
-
+        String expected= "akhya";
         //then
+        String actual=spellingSuggestion.deleteFL(name);
+        //when
+        Assert.assertTrue(expected.matches(actual));
     }
-
     @Test
-    public void deleteLLTest() {
+    public void deleteLLTest(){ //LL= last letter
+        String name= "Some";
         //given
-
-        //when
-
+        String expected= "Som";
         //then
+        String actual=spellingSuggestion.deleteLL(name);
+        //when
+        Assert.assertTrue(expected.matches(actual));
     }
-
     @Test
-    public void changeLetterTest() {
+    public void changeLetterTest(){ // to change any letter from indices 1-one before last index (not first or last)
         //given
-
-        //when
-
+        String name= "Some";
+        String expected= "Sole";
         //then
+        String actual=spellingSuggestion.changeLetter(name);
+        //when
+        Assert.assertTrue(expected.matches(actual));
     }
-
     @Test
-    public void insertLetterTest() {
+    public void insertLetterTest(){
         //given
-
-        //when
-
+        String name= "Makhy";
+        String expected="Makhya";
         //then
+        String actual= spellingSuggestion.insertLetter(name);
+        //when
+        Assert.assertTrue(expected.matches(actual));
     }
-
     @Test
-    public void swapTwoLettersTest() {
+    public void swapTwoLettersTest(){ //swap neighboring letters
         //given
-
-        //when
-
+        String name="Gatorade";
+        String expected="Gaotrade";
         //then
+        String actual=spellingSuggestion.swapTwoLetters(name);
+        //when
+        Assert.assertTrue(expected.matches(actual));
     }
-
     @Test
-    public void pluralizesWordTest() {
+    public void pluralizeTest(){ //adds s to end of a word
+        String name= "Makhya";
         //given
-
-        //when
-
+        String expected= "Makhyas";
         //then
+        String actual=spellingSuggestion.pluralize(name);
+        //when
+        Assert.assertTrue(expected.matches(actual));
     }
 }

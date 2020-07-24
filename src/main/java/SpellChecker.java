@@ -18,7 +18,7 @@ public class SpellChecker {
     }
 
 
-    public void initSet() throws FileNotFoundException, FileNotFoundException {
+    public void initSet() throws FileNotFoundException {
         Scanner sc = new Scanner(new File("letter_from_gandhi.txt"));
         while (sc.hasNextLine()) { //run thru file
             String[] line = getLine(sc.nextLine()); //built in nextLine gets first line from  the file of the input scaner sc, passes to getline
