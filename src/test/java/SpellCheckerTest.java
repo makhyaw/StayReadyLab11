@@ -1,8 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-import java.util.Set;
-import java.util.Scanner;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.Assert;
@@ -10,7 +8,7 @@ public class SpellCheckerTest {
     SpellChecker spellChecker;
     @Before
     public void setup() {
-        this.spellChecker = new SpellChecker();
+        this.spellChecker = new SpellChecker(); //
     }
     @Test
     public void readFileTest() throws FileNotFoundException {
