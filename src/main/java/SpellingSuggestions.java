@@ -23,7 +23,7 @@ public class SpellingSuggestions extends SpellChecker{
         return str.toString();
     }
     public String changeLetter(String word){
-        int index=2;
+        int index=2; 
         char ch='l';
         //char tempWord=word.charAt(3);  //change the 3rd index , get the char here
         word =word.substring(0, index)
